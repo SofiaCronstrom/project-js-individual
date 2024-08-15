@@ -1,37 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Art library</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+  <header>
     <nav>
-        
-            <a href="index.html">Art search</a>
-            <a href="favorites.html">Your favorites</a>
-        
+      <a href="index.html">Art search</a>
+      <a href="favorites.html">Your favorites</a>
     </nav>
+  </header>
     <section class="container">
-        <h1>Search for art inspiration</h1>
-        <article>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/> Suspendisse id neque eu nunc interdum dignissim et in<br/> lacus. Aenean a accumsan elit. Mauris vulputate in magna quis placerat.
-            </p>
-        </article>
+      <h1>Search for art inspiration</h1>
+      <article>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
+          Suspendisse id neque eu nunc interdum dignissim et in<br />
+          lacus. Aenean a accumsan elit. Mauris vulputate in magna quis placerat.
+        </p>
+      </article>
 
-        <form id="search-section">
-            <input type="text" class="search-input" placeholder="Search for a book...">
-            <button class="search-button">Search</button>
-        </form>
+      <form id="search-section">
+        <input type="text" name="search-input" placeholder="Search for a book..." />
+        <button class="search-button">Search</button>
+      </form>
 
-        <section class="search-results"></section>
-
-        <h2>Your Library</h2>
-        <div id="library"></div>
+      <section class="search-results"></section>
     </section>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

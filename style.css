@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+:root {
+  --background: #fffdf9;
+  --red: #ff0000;
+  --green: #00bc61;
+  --yellow: #ffae00;
+  --black: #1e1e1e;
+}
+
+body {
+  font-family: "Istok Web", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  align-self: flex-end;
+
+  nav a:first-of-type {
+    border: 2px solid var(--red);
+  }
+
+  nav a:last-of-type {
+    border: 2px solid var(--yellow);
+  }
+}
