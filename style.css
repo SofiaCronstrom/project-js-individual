@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-
+*{
+    
+}
 :root {
   --background: #fffdf9;
   --red: #ff0000;
@@ -10,19 +12,107 @@
 
 body {
   font-family: "Istok Web", sans-serif;
-  display: flex;
+  background-color: var(--background);
+  /*display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center;*/
 }
 
 header {
-  align-self: flex-end;
+ display: flex;
+ justify-content: flex-end;
+  
 
+  nav{
+    margin: 1rem;
+    
+  }
+
+  nav a{
+    text-decoration: none;
+    color: var(--black);
+    font-size: 1em;
+    padding: 0.5rem 0.4rem;
+    transition: 0.3s;
+  }
   nav a:first-of-type {
-    border: 2px solid var(--red);
+    border: 1.5px solid var(--red);
+    &:hover{
+        background-color: var(--red);
+        color: var(--background);
+    }
+    &:active{
+        border-width: 0.2px;
+        transition: 0.1s;
+    }
   }
 
   nav a:last-of-type {
-    border: 2px solid var(--yellow);
+    border: 1.5px solid var(--yellow);
+    margin-left: 0.5rem;
+    &:hover{
+        background-color: var(--yellow);
+        color: var(--background);
+    }
+    &:active{
+        border-width: 0.2px;
+    }
   }
 }
+
+/*main{
+    margin: 3rem auto 3rem auto;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}*/
+section.container{
+    margin: 3rem auto 3rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    h1{
+        font-size: 3em;
+        margin-bottom: 1rem;
+    }
+    article{
+        width: 70%;
+        align-self: center; 
+        p{
+        font-size: 1.2em;
+    }
+}
+
+    form{
+       display: flex;
+       flex-direction: column;
+       align-self: center;
+       width: 70%;
+       
+
+       input{
+        border: 1.5px solid var(--black);
+        padding: 0.7rem 0.4rem;
+        margin-bottom: 1rem;
+     
+       }
+
+       button{
+        appearance: none;
+        color: var(--black);
+        font-size: 1em;
+        padding: 0.5rem 0.4rem;
+        transition: 0.3s;
+        background-color: var(--background);
+        border: 1.5px solid var(--green);
+       }
+    }
+}
+hr{
+    width: 100%;
+    border: none;
+    background-color: var(--black);
+    height: 0.07rem;
+}
+
