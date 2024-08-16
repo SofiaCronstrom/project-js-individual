@@ -102,7 +102,9 @@ section.container {
 }
 
 .search-button,
-.save-button {
+.save-button,
+.pin-btn,
+.remove-btn {
   cursor: pointer;
   align-self: flex-end;
   appearance: none;
@@ -129,12 +131,24 @@ section.container {
   }
 }
 
-.save-button {
+.save-btn, .remove-btn {
   background-color: var(--background);
   border: 1.5px solid palevioletred;
 
   &:hover {
     background-color: palevioletred;
+    color: var(--background);
+  }
+}
+.remove-btn{
+  align-self: auto;
+}
+.pin-btn {
+  background-color: var(--background);
+  border: 1.5px solid rgb(25, 0, 212);
+  align-self: auto;
+  &:hover {
+    background-color: rgb(25, 0, 212);
     color: var(--background);
   }
 }
