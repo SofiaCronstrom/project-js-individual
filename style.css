@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-*{
-    
-}
+
 :root {
   --background: #fffdf9;
   --red: #ff0000;
@@ -19,116 +17,148 @@ body {
 }
 
 header {
- display: flex;
- justify-content: flex-end;
-  
+  display: flex;
+  justify-content: flex-end;
 
-  nav{
+
+  nav {
     margin: 1rem;
-    
+
   }
 
-  nav a{
+  nav a {
     text-decoration: none;
     color: var(--black);
     font-size: 1em;
     padding: 0.5rem 0.4rem;
     transition: 0.3s;
   }
+
   nav a:first-of-type {
     border: 1.5px solid var(--red);
-    &:hover{
-        background-color: var(--red);
-        color: var(--background);
+
+    &:hover {
+      background-color: var(--red);
+      color: var(--background);
     }
-    &:active{
-        border-width: 0.2px;
-        transition: 0.1s;
+
+    &:active {
+      border-width: 0.2px;
+      transition: 0.1s;
     }
   }
 
   nav a:last-of-type {
     border: 1.5px solid var(--yellow);
     margin-left: 0.5rem;
-    &:hover{
-        background-color: var(--yellow);
-        color: var(--background);
+
+    &:hover {
+      background-color: var(--yellow);
+      color: var(--background);
     }
-    &:active{
-        border-width: 0.2px;
+
+    &:active {
+      border-width: 0.2px;
     }
   }
 }
 
-section.container{
-    margin: 3rem auto 3rem auto;
+section.container {
+  margin: 3rem auto 3rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+
+  h1 {
+    font-size: 3em;
+    margin-bottom: 1rem;
+  }
+
+  article {
+    width: 70%;
+    align-self: center;
+
+    p {
+      font-size: 1.2em;
+    }
+  }
+
+  section.search {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 60%;
-    h1{
-        font-size: 3em;
-        margin-bottom: 1rem;
+    align-self: center;
+    width: 70%;
+
+
+    input {
+      border: 1.5px solid var(--black);
+      padding: 0.7rem 0.4rem;
+      margin-bottom: 1rem;
+
     }
-    article{
-        width: 70%;
-        align-self: center; 
-        p{
-        font-size: 1.2em;
+
+  }
+}
+
+.search-button,
+.save-button {
+  cursor: pointer;
+  align-self: flex-end;
+  appearance: none;
+  color: var(--black);
+  font-size: 1em;
+  padding: 0.5rem 0.4rem;
+  transition: 0.3s;
+  background-color: var(--background);
+  border: 1.5px solid var(--green);
+
+  &:active {
+    border-width: 0.2px;
+    transition: 0.1s;
+  }
+}
+
+.search-button {
+  background-color: var(--background);
+  border: 1.5px solid var(--green);
+
+  &:hover {
+    background-color: var(--green);
+    color: var(--background);
+  }
+}
+
+.save-button {
+  background-color: var(--background);
+  border: 1.5px solid palevioletred;
+
+  &:hover {
+    background-color: palevioletred;
+    color: var(--background);
+  }
+}
+
+hr {
+  width: 100%;
+  border: none;
+  background-color: var(--black);
+  height: 0.07rem;
+}
+
+section.search-results {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(4, 1fr);
+
+  figure {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
+  }
 }
-
-    form{
-       display: flex;
-       flex-direction: column;
-       align-self: center;
-       width: 70%;
-       
-
-       input{
-        border: 1.5px solid var(--black);
-        padding: 0.7rem 0.4rem;
-        margin-bottom: 1rem;
-     
-       }
-
-       button{
-        cursor: pointer;
-        align-self: flex-end;
-        appearance: none;
-        color: var(--black);
-        font-size: 1em;
-        padding: 0.5rem 0.4rem;
-        transition: 0.3s;
-        background-color: var(--background);
-        border: 1.5px solid var(--green);
-        &:hover{
-            background-color: var(--green);
-            color: var(--background);
-        }
-        &:active{
-            border-width: 0.2px;
-        }
-       }
-    }
-}
-hr{
-    width: 100%;
-    border: none;
-    background-color: var(--black);
-    height: 0.07rem;
-}
-
-section.search-results{
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-     figure{
-        img{
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-     }
-}
-
-
