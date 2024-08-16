@@ -1,9 +1,9 @@
     // DOM Elements
     const searchInput = document.querySelector('search-input');
     const searchButton = document.querySelector('search-button');
-    const searchResults = document.querySelector('search-results');
+    const searchResults = document.querySelector('.search-results');
     const library = document.querySelector('.art-favorites');
-
+    
     // Local Storage Key
     const STORAGE_KEY = 'artCollection';
 
@@ -17,22 +17,24 @@
         localStorage.setItem(STORAGE_KEY, JSON.stringify(books));
     }
     
-    fetchArt();
+    ArtImg();
 
-    // async function ArtImg() {
-    //        let arts = await fetchArt();
-    //        console.log(arts)
-    //        let objectId = await arts.objectIDs; 
-    //       objectId.forEach(art => {
-    //         console.log(art)
-    //       });
-    //      }
+     async function ArtImg() {
+           let arts = await fetchArt();
+          
+          arts.forEach(art => {
+            searchResults.innerHTML += `  <figure>
+                                           <img src='${art.url}'/>
+                                          <button class="save-button">Save</button>
+                                          </figure>`
+          });
+         }
 
     async function fetchArt() {
    try {
-     let response = await fetch("https://api.artic.edu/api/v1/artworks/search?query[term][is_public_domain]=true&limit=2&fields=id,title,image_id");
+     let response = await fetch("https://api.thecatapi.com/v1/images/search?limit=9");
      let data = await response.json();
-     console.log(data.image_id);
+     return data;
    } catch (error) {
      console.log(error);
    }
