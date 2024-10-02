@@ -27,12 +27,14 @@ function renderCollection() {
   cats.forEach((cat, index) => {
     catCollection.innerHTML += `<figure>
         <img src='${cat.image}'/>
+        <div class="fav-btn-container">
         <button data-index="${index}" class="pin-btn">
         ${cat.pinned ? "Unpin" : "Pin"}
         </button>
         <button data-index="${index}" class="remove-btn">
         Remove
         </button>
+        </div>
         </figure>`;
   });
 }
@@ -68,7 +70,9 @@ async function catImg(cats) {
   cats.forEach((cat) => {
     searchResults.innerHTML += `  <figure>
                                            <img src='${cat.url}'/>
+                                           <div class="save-btn-container">
                                           <button data-title="${cat.url}"class="save-btn">Save</button>
+                                          </div>
                                           </figure>`;
   });
 }
