@@ -6,17 +6,17 @@ const catCollection = document.querySelector(".cat-favorites");
 // Local Storage Key
 const CAT_KEY = "catCollection";
 
-// Fetch books from local storage
+// Fetch cats from local storage
 function getCollectionFromLocalStorage() {
   return JSON.parse(localStorage.getItem(CAT_KEY)) || [];
 }
 
-// Save books to local storage
+// Save cats to local storage
 function saveCollectionToLocalStorage(cats) {
   localStorage.setItem(CAT_KEY, JSON.stringify(cats));
 }
 
-//Render library
+//Render collection
 function renderCollection() {
   let cats = getCollectionFromLocalStorage();
 
@@ -104,5 +104,5 @@ catCollection.addEventListener("click", (e) => {
   }
 });
 
-// Initial render of the library (Read)
+// Initial render of the collection
 renderCollection();
